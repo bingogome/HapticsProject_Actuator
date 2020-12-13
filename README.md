@@ -21,7 +21,7 @@
 6. motorPinDir3D: 3D spatial direction - TODO
 
 ## Simulation - 2D
-![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/image_simulation.png?raw=true)
+![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/gif_simulation.gif?raw=true)
 
 ## Simulation - 3D
 TODO
