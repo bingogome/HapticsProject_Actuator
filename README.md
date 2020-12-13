@@ -1,6 +1,9 @@
 # HapticsProject_Actuator
 
 ## Modes
+0.1 ENABLE_SIMULATION: Enable Processing graphical simulation
+0.2 ENABLE_MOTORS: Enable motor signal output from Arduino Uno
+
 1. MODE_SAME: Under this mode, the actuators vibrate at the same frequency and amplitude.
 2. MODE_CLOCKWISE: Under this mode, the actuators vibrate in the clockwise direction.
 3. MODE_CCLKWISE: Under this mode, the actuators vibrate in the counter-clockwise direction.
