@@ -20,7 +20,8 @@
 5. gyroscopeVector: current body pose - TODO
 6. motorPinDir3D: 3D spatial direction - TODO
 
-## Simulation - 2D
+## Simulation - 2D Planar direction
+In the image, the actuators roll toward motor 5, representing forward direction.
 ![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/gif_simulation.gif?raw=true)
 
 ## Simulation - 3D
