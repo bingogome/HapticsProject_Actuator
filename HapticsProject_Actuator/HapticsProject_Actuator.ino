@@ -11,27 +11,27 @@
 // mode 1
 #ifdef MODE_SAME
 int freqLevel = 2; // 1~5, vibration frequency = 1/(0.01*freqLevel)
-double ampLevel = 0.5; // 0.0`~1.0
+double ampLevel = 0.5; // 0.0~1.0
 #endif
 
 // mode 2
 #ifdef MODE_CLOCKWISE
 int freqLevel = 2; // 1~5, vibration frequency = 1/(0.01*freqLevel)
-double ampLevel = 0.5; // 0.0`~1.0
+double ampLevel = 0.5; // 0.0~1.0
 int rollLevel = 5; // 1~5, rolling speed
 #endif
 
 // mode 3
 #ifdef MODE_CCLKWISE
 int freqLevel = 2; // 1~5, vibration frequency = 1/(0.01*freqLevel)
-double ampLevel = 0.5; // 0.0`~1.0
+double ampLevel = 0.5; // 0.0~1.0
 int rollLevel = 5; // 1~5, rolling speed
 #endif
 
 // mode 4
 #ifdef MODE_PLANARDIRECTION
 int freqLevel = 2; // 1~5, vibration frequency = 1/(0.01*freqLevel)
-double ampLevel = 0.5; // 0.0`~1.0
+double ampLevel = 0.5; // 0.0~1.0
 int rollLevel = 5; // 1~5, rolling speed
 int motorPinDir = 5; // 1~5, direction
 #endif
