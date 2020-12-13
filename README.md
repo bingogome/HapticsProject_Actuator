@@ -23,7 +23,7 @@
 ## Simulation - 2D Planar direction
 In the image, the actuators roll toward motor 5, representing forward direction.
 ![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/images/gif_simulation.gif?raw=true)
-![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/images/planar_direction.png?=100x?raw=true)
+![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/images/planar_direction.png?=50x?raw=true)
 
 ## Simulation - 3D
 TODO
