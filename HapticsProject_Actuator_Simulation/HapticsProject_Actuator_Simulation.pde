@@ -67,11 +67,22 @@ void drawEllipse(float ampLevel, int freqLevel, boolean mot1, boolean mot2, bool
     else{vib41 = 0; vib42 = 0;}
     if(mot5){vib51 = (int)(ampLevel*10.0*r1); vib52 = (int)(ampLevel*10.0*r2);}
     else{vib51 = 0; vib52 = 0;}
+    
+    fill(0,255,0);
     ellipse(186+vib11,163+vib12,motorSize,motorSize);
     ellipse(229+vib21,297+vib22,motorSize,motorSize);
     ellipse(371+vib31,297+vib32,motorSize,motorSize);
     ellipse(414+vib41,163+vib42,motorSize,motorSize);
     ellipse(300+vib51,80+vib52,motorSize,motorSize);
+    
+    fill(0, 102, 153);
+    textSize(25);
+    text("1", 186+vib11-7, 163+vib12+11); 
+    text("2", 229+vib21-7, 297+vib22+11); 
+    text("3", 371+vib31-7, 297+vib32+11); 
+    text("4", 414+vib41-7, 163+vib42+11); 
+    text("5", 300+vib51-7, 80+vib52+11); 
+    
   }
 }
 
@@ -84,13 +95,20 @@ void draw () {
   noFill();
   circle(300,200,240);
   stroke(0,255,0);     //stroke color
-  fill(0,255,0);
+  
   // plot the 5 motors (planar directionality)
   switch((int)inMode){
     
     case 1: // MODE_SAME
       freqLevel = inVal2;
       ampLevel = inVal3;
+      
+      fill(0, 102, 153);
+      textSize(25);
+      text("Freq Level: "+freqLevel, 10, 30); 
+      text("Amp Level: "+ampLevel, 10, 30+25);
+      
+      fill(0,255,0);
       drawEllipse(ampLevel, (int)freqLevel, true, true, true, true, true);
       break;
       
@@ -98,6 +116,14 @@ void draw () {
       freqLevel = inVal2;
       ampLevel = inVal3;
       rollLevel = inVal4;
+      
+      fill(0, 102, 153);
+      textSize(25);
+      text("Freq Level: "+freqLevel, 10, 30); 
+      text("Amp Level: "+ampLevel, 10, 30+25); 
+      text("Roll Level: "+rollLevel, 10, 30+25+25); 
+      
+      fill(0,255,0);
       if(counter%(5*2*rollLevel)>=0 && counter%(5*2*rollLevel)<2*rollLevel)
         drawEllipse(ampLevel, (int)freqLevel, false, false, false, false, true);
       if(counter%(5*2*rollLevel)>=2*rollLevel && counter%(5*2*rollLevel)<2*2*rollLevel)
@@ -117,6 +143,14 @@ void draw () {
       freqLevel = inVal2;
       ampLevel = inVal3;
       rollLevel = inVal4;
+      
+      fill(0, 102, 153);
+      textSize(25);
+      text("Freq Level: "+freqLevel, 10, 30); 
+      text("Amp Level: "+ampLevel, 10, 30+25); 
+      text("Roll Level: "+rollLevel, 10, 30+25+25); 
+      
+      fill(0,255,0);
       if(counter%(5*2*rollLevel)>=0 && counter%(5*2*rollLevel)<2*rollLevel)
         drawEllipse(ampLevel, (int)freqLevel, true, false, false, false, false);
       if(counter%(5*2*rollLevel)>=2*rollLevel && counter%(5*2*rollLevel)<2*2*rollLevel)
@@ -137,6 +171,15 @@ void draw () {
       ampLevel = inVal3;
       rollLevel = inVal4;
       motorPinDir = inVal5;
+      
+      fill(0, 102, 153);
+      textSize(25);
+      text("Freq Level: "+freqLevel, 10, 30); 
+      text("Amp Level: "+ampLevel, 10, 30+25); 
+      text("Roll Level: "+rollLevel, 10, 30+25+25); 
+      text("Roll Direction: "+motorPinDir, 10, 30+25+25+25); 
+      
+      fill(0,255,0);
       if(counter%(3*2*rollLevel)>=0 && counter%(3*2*rollLevel)<2*rollLevel){
         drawEllipse(ampLevel, (int)freqLevel, 
           ((motorPinDir+2)%5)==1 || ((motorPinDir-2+5)%5)==1, 
