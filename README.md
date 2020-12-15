@@ -21,7 +21,8 @@
 6. motorPinDir3D: 3D spatial direction - TODO
 
 ## Simulation - 2D Planar direction
-In the image, the actuators roll toward motor 5, representing forward direction.
+1. For more simulation please see in the Media folder.
+2. In the image, the actuators roll toward motor 5, representing forward direction.
 ![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/images/gif_simulation.gif?raw=true)
 ![alt text](https://github.com/bingogome/HapticsProject_Actuator/blob/main/images/planar_direction.png)
 
