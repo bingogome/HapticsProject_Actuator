@@ -1,5 +1,5 @@
 #define ENABLE_SIMULATION
-#define ENABLE_MOTORS
+//#define ENABLE_MOTORS
 
 //#define MODE_SAME // mode: motors vibration at same frequency
 //#define MODE_CLOCKWISE // mode: motors vibrate clockwise
@@ -33,7 +33,7 @@ int rollLevel = 5; // 1~5, rolling speed
 int freqLevel = 2; // 1~5, vibration frequency = 1/(0.01*freqLevel)
 double ampLevel = 0.5; // 0.0~1.0
 int rollLevel = 5; // 1~5, rolling speed
-int motorPinDir = 5; // 1~5, direction
+int motorPinDir = 4; // 1~5, direction
 #endif
 
 // mode 5
@@ -219,7 +219,7 @@ void vibCclkwise(int freqLevel, double ampLevel, int rollLevel){
 }
 // ****************************************************
 
-// Mode 4: vibration direction to a motor *********************
+// Mode 4: vibration direction to a motor - 2D*********************
 void vibPlanarDir(int freqLevel, double ampLevel, int rollLevel, int motorPinDir){
   fireTwo(freqLevel, ampLevel, rollLevel, (motorPinDir+2)%5, (motorPinDir-2+5)%5, 4, motorPinDir);
   fireTwo(freqLevel, ampLevel, rollLevel, (motorPinDir+1)%5, (motorPinDir-1+5)%5, 4, motorPinDir);
@@ -227,6 +227,11 @@ void vibPlanarDir(int freqLevel, double ampLevel, int rollLevel, int motorPinDir
 }
 // ****************************************************
 
+// Mode 4: vibration direction to a motor - 3D*********************
+void vibSpatialDir(){
+  
+}
+// ****************************************************
 void loop() {
   
   #ifdef MODE_SAME
@@ -246,5 +251,8 @@ void loop() {
   vibPlanarDir(freqLevel, ampLevel, rollLevel, motorPinDir);
   #endif
 
+  #ifdef MODE_SPATIALDIRECTION
+  vibSpatialDir();
+  #endif
   
 }
